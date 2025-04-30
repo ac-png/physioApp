@@ -1,0 +1,472 @@
+{
+	"id": 1,
+	"name": "Alice Walker",
+	"phone": "555-100-2001",
+	"address": "12 Garden Lane, Roseville",
+	"allowNotifications": true,
+	"programmes": [
+		{
+			"patientId": 1,
+			"programmeId": 1,
+			"startDate": "2025-04-27T00:00:00",
+			"endDate": "2025-05-03T00:00:00",
+			"treatments": [
+				{
+					"id": 1,
+					"name": "Cervical Spine Mobilization",
+					"subtitle": "Neck Region"
+				}
+			]
+		}
+	],
+	"appointments": [
+		{
+			"id": 1,
+			"patientId": 1,
+			"when": "2025-05-16T15:11:34.5801992",
+			"physioId": 2,
+			"physio": {
+				"id": 2,
+				"name": "Dr Alice Legg",
+				"phone": "086 234-5678",
+				"address": "45 Oak Avenue",
+				"email": "alice.legg@flexicare.ie"
+			}
+		},
+		{
+			"id": 2,
+			"patientId": 1,
+			"when": "2025-05-07T08:11:34.5832259",
+			"physioId": 2,
+			"physio": {
+				"id": 2,
+				"name": "Dr Alice Legg",
+				"phone": "086 234-5678",
+				"address": "45 Oak Avenue",
+				"email": "alice.legg@flexicare.ie"
+			}
+		}
+	],
+	"sessions": [
+		{
+			"id": 1,
+			"patientId": 1,
+			"exerciseId": 3,
+			"exercise": {
+				"id": 3,
+				"name": "Glute Bridge",
+				"reps": "1 full Glute Bridge",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://media1.popsugar-assets.com/files/thumbor/Cdg_9oBw0JygpcbUKMTjYneKF5U=/fit-in/1584x1584/filters:format_auto():upscale()/2024/06/03/047/n/1922729/6c941ba7665e5af32f7f02.07243797_PS23_Fitness.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=WtilA9IJX1c"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-04-27T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 2,
+			"patientId": 1,
+			"exerciseId": 3,
+			"exercise": {
+				"id": 3,
+				"name": "Glute Bridge",
+				"reps": "1 full Glute Bridge",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://media1.popsugar-assets.com/files/thumbor/Cdg_9oBw0JygpcbUKMTjYneKF5U=/fit-in/1584x1584/filters:format_auto():upscale()/2024/06/03/047/n/1922729/6c941ba7665e5af32f7f02.07243797_PS23_Fitness.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=WtilA9IJX1c"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-04-28T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 3,
+			"patientId": 1,
+			"exerciseId": 3,
+			"exercise": {
+				"id": 3,
+				"name": "Glute Bridge",
+				"reps": "1 full Glute Bridge",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://media1.popsugar-assets.com/files/thumbor/Cdg_9oBw0JygpcbUKMTjYneKF5U=/fit-in/1584x1584/filters:format_auto():upscale()/2024/06/03/047/n/1922729/6c941ba7665e5af32f7f02.07243797_PS23_Fitness.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=WtilA9IJX1c"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-04-29T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 4,
+			"patientId": 1,
+			"exerciseId": 3,
+			"exercise": {
+				"id": 3,
+				"name": "Glute Bridge",
+				"reps": "1 full Glute Bridge",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://media1.popsugar-assets.com/files/thumbor/Cdg_9oBw0JygpcbUKMTjYneKF5U=/fit-in/1584x1584/filters:format_auto():upscale()/2024/06/03/047/n/1922729/6c941ba7665e5af32f7f02.07243797_PS23_Fitness.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=WtilA9IJX1c"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-04-30T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 5,
+			"patientId": 1,
+			"exerciseId": 3,
+			"exercise": {
+				"id": 3,
+				"name": "Glute Bridge",
+				"reps": "1 full Glute Bridge",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://media1.popsugar-assets.com/files/thumbor/Cdg_9oBw0JygpcbUKMTjYneKF5U=/fit-in/1584x1584/filters:format_auto():upscale()/2024/06/03/047/n/1922729/6c941ba7665e5af32f7f02.07243797_PS23_Fitness.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=WtilA9IJX1c"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-05-01T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 6,
+			"patientId": 1,
+			"exerciseId": 3,
+			"exercise": {
+				"id": 3,
+				"name": "Glute Bridge",
+				"reps": "1 full Glute Bridge",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://media1.popsugar-assets.com/files/thumbor/Cdg_9oBw0JygpcbUKMTjYneKF5U=/fit-in/1584x1584/filters:format_auto():upscale()/2024/06/03/047/n/1922729/6c941ba7665e5af32f7f02.07243797_PS23_Fitness.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=WtilA9IJX1c"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-05-02T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 7,
+			"patientId": 1,
+			"exerciseId": 3,
+			"exercise": {
+				"id": 3,
+				"name": "Glute Bridge",
+				"reps": "1 full Glute Bridge",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://media1.popsugar-assets.com/files/thumbor/Cdg_9oBw0JygpcbUKMTjYneKF5U=/fit-in/1584x1584/filters:format_auto():upscale()/2024/06/03/047/n/1922729/6c941ba7665e5af32f7f02.07243797_PS23_Fitness.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=WtilA9IJX1c"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-05-03T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 8,
+			"patientId": 1,
+			"exerciseId": 4,
+			"exercise": {
+				"id": 4,
+				"name": "Bird Dog",
+				"reps": "1 full Bird Dog",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/bird-dog-exercise-1674234348.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=k2azbhhuKuM"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-04-27T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 9,
+			"patientId": 1,
+			"exerciseId": 4,
+			"exercise": {
+				"id": 4,
+				"name": "Bird Dog",
+				"reps": "1 full Bird Dog",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/bird-dog-exercise-1674234348.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=k2azbhhuKuM"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-04-28T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 10,
+			"patientId": 1,
+			"exerciseId": 4,
+			"exercise": {
+				"id": 4,
+				"name": "Bird Dog",
+				"reps": "1 full Bird Dog",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/bird-dog-exercise-1674234348.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=k2azbhhuKuM"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-04-29T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 11,
+			"patientId": 1,
+			"exerciseId": 4,
+			"exercise": {
+				"id": 4,
+				"name": "Bird Dog",
+				"reps": "1 full Bird Dog",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/bird-dog-exercise-1674234348.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=k2azbhhuKuM"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-04-30T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 12,
+			"patientId": 1,
+			"exerciseId": 4,
+			"exercise": {
+				"id": 4,
+				"name": "Bird Dog",
+				"reps": "1 full Bird Dog",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/bird-dog-exercise-1674234348.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=k2azbhhuKuM"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-05-01T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 13,
+			"patientId": 1,
+			"exerciseId": 4,
+			"exercise": {
+				"id": 4,
+				"name": "Bird Dog",
+				"reps": "1 full Bird Dog",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/bird-dog-exercise-1674234348.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=k2azbhhuKuM"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-05-02T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		},
+		{
+			"id": 14,
+			"patientId": 1,
+			"exerciseId": 4,
+			"exercise": {
+				"id": 4,
+				"name": "Bird Dog",
+				"reps": "1 full Bird Dog",
+				"sets": "2-3 sets",
+				"frequency": "3-4 times per week",
+				"rest": "30 seconds between sets",
+				"equipment": "None. Ensure adequate room is available.",
+				"musclesWorked": "Ankle stabilisers, calves, foct muscles",
+				"benefits": "Increases ankle mobility, strengthens stabilising muscles, Increases ankle mobility, strengthens stabilising muscles, improves balance and joint control.",
+				"howToPerform": "1. Sit with your legs extended or in a chair, keeping your back straight.\r\n 2. Lift one foot and 'write' the alphabet in the air with your big toe, moving through full ankle motion (up, down, in, out).\r\n 3. Repeat with the other foot. \r\n 4. Complete 2-3 sets with 30 seconds rest between sets.",
+				"tips": "Try closing your eyes for added challenge.\r\n Focus on controlled, precise movements.",
+				"thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/bird-dog-exercise-1674234348.jpg",
+				"videoUrl": "https://www.youtube.com/watch?v=k2azbhhuKuM"
+			},
+			"exerciseCategoryId": 3,
+			"exerciseCategory": {
+				"id": 3,
+				"name": "Core Stability"
+			},
+			"exerciseDate": "2025-05-03T00:00:00",
+			"notes": "",
+			"done": false,
+			"painLevel": 0,
+			"feedback": ""
+		}
+	]
+}

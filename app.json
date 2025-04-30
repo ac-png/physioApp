@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "PhysioApp",
+    "slug": "physio_app",
+    "version": "1.0.0",
+    "scheme": "physio-app-scheme",
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "backgroundColor": "#FFFFFF",
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#CEEACA",
+          "image": "./assets/branding/logo.png",
+          "dark": {
+            "image": "./assets/branding/logo.png",
+            "backgroundColor": "#CEEACA"
+          },
+          "imageWidth": 75
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": false,
+          "supportsPictureInPicture": false
+        }
+      ]
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/branding/logo.png",
+      "imageWidth": 75,
+      "resizeMode": "contain",
+      "backgroundColor": "#CEEACA"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#CEEACA"
+      }
+    }
+  }
+}
