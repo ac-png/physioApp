@@ -81,7 +81,7 @@ const EachTask = () => {
 							<Image
 								source={icons.chevronLeft}
 								className="size-3 aspect-[calc(6/9)]"
-								tintColor={"#000000"}
+								tintColor="#000000"
 							/>
 						</TouchableOpacity>
 						
@@ -98,7 +98,7 @@ const EachTask = () => {
 							<Image
 								source={icons.chevronRight}
 								className="size-3 aspect-[calc(6/9)]"
-								tintColor={"#000000"}
+								tintColor="#000000"
 							/>
 						</TouchableOpacity>
 
@@ -128,7 +128,7 @@ const EachTask = () => {
 						<Image
 							source={icons.play}
 							className="size-4 aspect-[calc(4/5)]"
-							tintColor={"#FFFFFF"}
+							tintColor="#FFFFFF"
 						/>
 					</TouchableOpacity>
 				</View>

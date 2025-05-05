@@ -1,7 +1,7 @@
 import { icons } from 'constants/icons'
-import { router } from 'expo-router';
+import { router, useFocusEffect } from 'expo-router';
 import { Session } from 'interfaces/interfaces';
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { View, ScrollView, Text, Image, TouchableOpacity } from 'react-native'
 import { getSessions } from 'services/api';
 import { headerDate } from 'services/dateHelpers'
@@ -15,17 +15,19 @@ const Tasks = () => {
 	const BASE_URL = process.env.EXPO_PUBLIC_BACKEND_API_URL;
 	const [sessionsData, setSessionsData]= useState(null);
 
-	useEffect(() => {
-		const fetchData = async () => {
+	useFocusEffect(
+		useCallback(() => {
+			const fetchData = async () => {
 			const sessions = await getSessions();
 
 			if (!sessions.error) {
 				setSessionsData(sessions);
 			}
-		};
+			};
 
-		fetchData();
-	}, []);
+			fetchData();
+		}, [])
+	);
 
 	type GroupedSessionsProps = {
 		[categoryId: number]: {

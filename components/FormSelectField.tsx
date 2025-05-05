@@ -4,21 +4,12 @@ import SelectDropdown from 'react-native-select-dropdown';
 
 type FormSelectFieldProps = {
     labelText: string;
-    selectData: [] | object;
+    selectData: number[];
     onSelect: any;
     innerLabelRightVisible: boolean;
     innerLabelRightText: string;
     children?: React.ReactNode;
 };
-
-const exampleData = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-]
 
 export const FormSelectField = (
     { labelText, selectData, onSelect, innerLabelRightVisible, innerLabelRightText, children }
@@ -30,7 +21,7 @@ export const FormSelectField = (
             { labelText }
         </Text>
         <SelectDropdown
-            data={exampleData}
+            data={selectData}
             onSelect={onSelect}
             renderButton={(selectedItem, isOpened) => {
             return (

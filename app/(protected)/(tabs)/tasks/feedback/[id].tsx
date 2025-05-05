@@ -9,6 +9,7 @@ import { Session } from 'interfaces/interfaces'
 import React, { useEffect, useState } from 'react'
 import { View, Text, ScrollView } from 'react-native'
 import { getSessionById, updateSession } from 'services/api'
+import { arrayRange } from 'services/numberHelpers'
 
 const TaskFeedback = () => {
 
@@ -16,8 +17,15 @@ const TaskFeedback = () => {
 	const sessionId = Number(id);
 
 	const [sessionData, setSessionData]= useState<Session | null>(null);
+	
+	const [repsTarget, setRepsTarget]= useState<number>(0);
 	const [repsCompleted, setRepsCompleted]= useState<number>(0);
+	const [repsLabel, setRepsLabel]= useState<string>("0");
+	
+	const [setsTarget, setSetsTarget]= useState<number>(0);
 	const [setsCompleted, setSetsCompleted]= useState<number>(0);
+	const [setsLabel, setSetsLabel]= useState<string>("0");
+	
 	const [painLevel, onChangePainLevel]= useState<number>(0);
 	const [feedbackNotes, onChangeFeedbackNotes]= useState<string>("");
 
@@ -38,17 +46,76 @@ const TaskFeedback = () => {
 		
 	}, []);
 
-	// There's no integer reps / sets values from the API right now
-	const exampleData = [
+	const noValueData = [
 		1,
 		2,
 		3,
 		4,
 		5,
-		6
+		6,
+		7,
+		8,
+		9,
+		10
 	]
 
+	const getArrayValues = (inputValue: number) => {
+
+		if (inputValue > 0) {
+
+			const start = inputValue - inputValue;
+			const end = inputValue + inputValue;
+			const result = arrayRange(start, end, 1);
+
+			return result;
+
+		} else {
+			return noValueData;
+		}
+
+	}
+
+	useEffect(() => {
+
+		if (sessionData) {
+
+			// Get target reps value
+			const repsValue = Number(sessionData.exercise.reps);
+
+			if (isNaN(repsValue)) {
+				setRepsTarget(0);
+				setRepsLabel(sessionData.exercise.reps);
+			} else {
+				setRepsTarget(Math.round(repsValue));
+				setRepsLabel(repsValue.toString());
+			}
+
+			// Get target sets value
+			const setsValue = Number(sessionData.exercise.sets);
+
+			if (isNaN(setsValue)) {
+				setSetsTarget(0);
+				setSetsLabel(sessionData.exercise.sets);
+			} else {
+				setSetsTarget(Math.round(setsValue));
+				setSetsLabel(repsValue.toString());
+			}
+
+		}	
+		
+	}, [sessionData]);
+
 	const submitFeedback = async () => {
+
+		let completed;
+
+		if (repsCompleted && setsCompleted) {
+			completed = JSON.stringify({repsCompleted, setsCompleted})
+		} else {
+			completed = JSON.stringify({repsCompleted: 0, setsCompleted: 0})
+		}
+
+		const notes = completed.concat("\n", feedbackNotes.toString())
 
 		try {
 
@@ -57,7 +124,7 @@ const TaskFeedback = () => {
 					id: sessionId,
 					done: true,
 					painLevel,
-					feedback: feedbackNotes
+					feedback: notes
 			});
 
 			if (submit.error) {
@@ -93,22 +160,22 @@ const TaskFeedback = () => {
 						<View className="w-1/2 pr-2">
 							<FormSelectField
 								labelText="Reps"
-								selectData={exampleData}
+								selectData={getArrayValues(repsTarget)}
 								onSelect={(selectedItem:any, index:number) => {
-									console.log("Select changed")
+									setRepsCompleted(Math.round(Number(selectedItem)));
 								}}
-								innerLabelRightText="/  3"
+								innerLabelRightText={`/  ${repsLabel}`}
 								innerLabelRightVisible
 							/>
 						</View>
 						<View className="w-1/2 pl-2">
 							<FormSelectField
 								labelText="Sets"
-								selectData={exampleData}
+								selectData={getArrayValues(setsTarget)}
 								onSelect={(selectedItem:any, index:number) => {
-									console.log("Select changed")
+									setSetsCompleted(Math.round(Number(selectedItem)));
 								}}
-								innerLabelRightText="/  3"
+								innerLabelRightText={`/  ${setsLabel}`}
 								innerLabelRightVisible
 							/>
 						</View>

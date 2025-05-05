@@ -1,11 +1,10 @@
 import axios from "axios";
 import { icons } from "constants/icons";
 import { useAuth } from "context/AuthContext";
-import { router } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 import { Session } from "interfaces/interfaces";
-import { useEffect, useState } from "react";
-import { Text, View, TouchableOpacity, ScrollView, Image } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useCallback, useEffect, useState } from "react";
+import { Text, View, SafeAreaView, TouchableOpacity, ScrollView, Image } from "react-native";
 import { getSessions } from "services/api";
 
 export default function Index() {
@@ -15,6 +14,7 @@ export default function Index() {
 
     const [sessionsData, setSessionsData]= useState(null);
     const [sevenDayData, setSevenDayData]= useState<{ date: string; painLevel: number }[] | null>(null);
+    const [sevenDaySessionData, setSevenDaySessionData]= useState<{ date: string; sessionsCompleted: number }[] | null>(null);
 
     function getSessionsProgress(sessions: { done: boolean }[]) {
         const completed = sessions.filter(session => session.done).length;
@@ -71,19 +71,48 @@ export default function Index() {
 
     };
 
-    useEffect(() => {
+    const getSevenDaySessionData = (sessions: Session[]) => {
+        const result: { date: string; sessionsCompleted: number }[] = [];
 
-        const fetchData = async () => {
+        for (let i = 6; i >= 0; i--) {
+            const currentDate = new Date();
+            currentDate.setHours(0, 0, 0, 0);
+            currentDate.setDate(currentDate.getDate() - i);
+
+            const dateStr = currentDate.toISOString().split("T")[0]; // Format: YYYY-MM-DD
+
+            const sessionsForDay = sessions.filter(session => {
+            if (!session.done || !session.exerciseDate) return false;
+
+            const sessionDate = new Date(session.exerciseDate);
+            sessionDate.setHours(0, 0, 0, 0);
+
+            return sessionDate.getTime() === currentDate.getTime();
+            });
+
+            result.push({
+                date: dateStr,
+                sessionsCompleted: sessionsForDay.length,
+            });
+        }
+
+        return result;
+
+    };
+
+    useFocusEffect(
+        useCallback(() => {
+            const fetchData = async () => {
             const sessions = await getSessions();
 
             if (!sessions.error) {
                 setSessionsData(sessions);
             }
-        };
+            };
 
-        fetchData();
-        
-    }, []);
+            fetchData();
+        }, [])
+    );
 
     useEffect(() => {
 
@@ -105,7 +134,7 @@ export default function Index() {
 
     return (           
         <SafeAreaView className="w-full pt-9 px-6">
-        <ScrollView className="w-full" showsVerticalScrollIndicator={false}>
+        <ScrollView className="w-full pt-9 px-6" showsVerticalScrollIndicator={false}>
 
             {/* Welcome Text */}
             <View className="flex gap-y-1 mb-9">
@@ -200,10 +229,31 @@ export default function Index() {
                     
                     <View className="flex flex-row justify-between">
                         <Text className="text-black text-xl font-bold tracking-wide">
-                            How{"\n"}Many{"\n"}Reps?{"\n"}Done!
+                            How{"\n"}Many{"\n"}Tasks{"\n"}Done?
                         </Text>
-                        <View>
-                            {/* Future: todo change reps in API to integer value */}
+                        <View className="flex justify-end">
+                            <View className="z-10 flex flex-row gap-x-3 items-end">
+                                {sevenDayData && sevenDayData.map((eachDataPoint, index) => (
+                                    index === sevenDayData.length - 1 ? (
+                                        <View
+                                            key={`item-${index}`}
+                                            className="min-h-2 w-3 bg-black rounded-t"
+                                            style={{ height: eachDataPoint.painLevel * 8 || 8 }}
+                                        />
+                                    ) : (
+                                        <View
+                                            key={`item-${index}`}
+                                            className="min-h-2 w-3 bg-pastel-highlight-purple rounded-t"
+                                            style={{ height: eachDataPoint.painLevel * 8 || 8 }}
+                                        />
+                                    )
+                                ))}
+                            </View>
+                            <View className="z-0 absolute h-full w-full flex justify-evenly">
+                                <View className="w-full h-px bg-primary/10" />
+                                <View className="w-full h-px bg-primary/10" />
+                            </View>
+                            <View className="w-full h-px bg-primary/10" />
                         </View>
                     </View>
 

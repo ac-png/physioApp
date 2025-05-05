@@ -11,3 +11,9 @@ export const numberToWords = (num: number): string => {
   if (num < 100) return tens[Math.floor(num / 10)] + (num % 10 === 0 ? '' : ' ' + words[num % 10]);  // Numbers from 20 to 99
   return '';
 };
+
+export const arrayRange = (start: number, stop:number, step:number) =>
+	Array.from(
+	{ length: (stop - start) / step + 1 },
+	(value, index) => start + index * step
+);

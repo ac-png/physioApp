@@ -1,6 +1,5 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, SafeAreaView, Text, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import { OnboardingPolicies } from 'components/OnboardingPolicies'
 import { OnboardingButton } from 'components/OnboardingButton'
 import { router } from 'expo-router'
