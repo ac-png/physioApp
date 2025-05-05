@@ -2,7 +2,7 @@ import { FormPageHeader } from 'components/FormPageHeader'
 import { useLocalSearchParams } from 'expo-router';
 import { Program } from 'interfaces/interfaces';
 import { useState, useEffect } from 'react';
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, SafeAreaView } from 'react-native'
 import { getProgrammes } from 'services/api';
 
 const EachProgram = () => {
@@ -41,7 +41,7 @@ const EachProgram = () => {
 		}, [programId, programData]);
 
 	return (
-		<ScrollView>
+		<SafeAreaView>
 						
 			<FormPageHeader
 				backPageName="My Program"
@@ -101,9 +101,9 @@ const EachProgram = () => {
 					))}
 				</View>
 
-		</ScrollView>
+			</ScrollView>
 
-		</ScrollView>
+		</SafeAreaView>
 	)
 }
 

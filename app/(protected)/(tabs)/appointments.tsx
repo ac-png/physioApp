@@ -2,7 +2,7 @@ import axios from 'axios';
 import { icons } from 'constants/icons'
 import { Appointment } from 'interfaces/interfaces';
 import React, { useEffect, useState } from 'react'
-import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native'
 import { getAppointments } from 'services/api';
 import { formatOrdinalDate, headerDate } from 'services/dateHelpers';
 
@@ -111,7 +111,7 @@ const Appointments = () => {
 	
 
 	return (
-		<View className='h-screen'>
+		<SafeAreaView className='h-screen'>
 		
 			<View className="bg-pastel-green w-full py-9 overflow-x-hidden flex gap-y-9 items-start justify-start">
 				
@@ -145,7 +145,7 @@ const Appointments = () => {
 						<TouchableOpacity
 							key={index}
 							className="bg-white w-[14.285714%] min-w-12 aspect-[2/3] rounded-md flex items-center justify-center"
-							onPress={() => setSelectedDate(item)}  // <-- SUPER CLEAN now
+							onPress={() => setSelectedDate(item)}
 						>
 							<Text className="text-black">{day}</Text>
 							<Text className="text-2xl text-black font-bold">{date}</Text>
@@ -297,7 +297,7 @@ const Appointments = () => {
 	
 			</ScrollView>
 	
-		</View>
+		</SafeAreaView>
 	)
 }
 

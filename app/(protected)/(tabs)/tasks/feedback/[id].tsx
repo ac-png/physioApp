@@ -7,7 +7,7 @@ import { TextAreaField } from 'components/TextAreaField'
 import { router, useLocalSearchParams } from 'expo-router'
 import { Session } from 'interfaces/interfaces'
 import React, { useEffect, useState } from 'react'
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, SafeAreaView } from 'react-native'
 import { getSessionById, updateSession } from 'services/api'
 import { arrayRange } from 'services/numberHelpers'
 
@@ -144,6 +144,7 @@ const TaskFeedback = () => {
 
 	return (
 		<ScrollView>
+		<SafeAreaView>
 			
 			<FormPageHeader
 				backPageName="Tasks"
@@ -202,7 +203,8 @@ const TaskFeedback = () => {
 				
 				</FormPageView>
 			</View>
-	
+		
+		</SafeAreaView>
 		</ScrollView>
 	)
 }

@@ -24,7 +24,7 @@ const repsCompletedMetrics = () => {
 				</TouchableOpacity>
 		
 				<Text className="text-black text-3xl font-bold tracking-wide">
-					Metrics: Reps
+					Metrics: Tasks
 				</Text>
 		
 

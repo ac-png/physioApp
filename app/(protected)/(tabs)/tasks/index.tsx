@@ -2,7 +2,7 @@ import { icons } from 'constants/icons'
 import { router, useFocusEffect } from 'expo-router';
 import { Session } from 'interfaces/interfaces';
 import React, { useCallback, useEffect, useState } from 'react'
-import { View, ScrollView, Text, Image, TouchableOpacity } from 'react-native'
+import { View, ScrollView, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native'
 import { getSessions } from 'services/api';
 import { headerDate } from 'services/dateHelpers'
 import { getTodaysSessions } from 'services/sessionsHelper';
@@ -11,8 +11,6 @@ import { getTodaysSessions } from 'services/sessionsHelper';
 const Tasks = () => {
 
 	const todaysDate = new Date();
-
-	const BASE_URL = process.env.EXPO_PUBLIC_BACKEND_API_URL;
 	const [sessionsData, setSessionsData]= useState(null);
 
 	useFocusEffect(
@@ -119,7 +117,7 @@ const Tasks = () => {
 	const streak = sessionsData ? calculateStreak(sessionsData) : 0
 
 	return (
-		<View className='h-screen'>
+		<SafeAreaView className='h-screen'>
 	
 			<View className="bg-pastel-green w-full pt-9 px-6 flex gap-y-9 items-start justify-start">
 				
@@ -232,7 +230,7 @@ const Tasks = () => {
 	
 			</ScrollView>
 	
-		</View>
+		</SafeAreaView>
 	)
 }
 

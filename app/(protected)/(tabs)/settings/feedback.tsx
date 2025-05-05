@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, SafeAreaView } from 'react-native'
 import React from 'react'
 import { FormPageHeader } from 'components/FormPageHeader'
 import { FormPageView } from 'components/FormPageView'
@@ -8,6 +8,7 @@ import { TextAreaField } from 'components/TextAreaField'
 const Feedback = () => {
 	return (
 	<ScrollView>
+	<SafeAreaView>
 		
 		<FormPageHeader
 			backPageName="Settings"
@@ -38,6 +39,7 @@ const Feedback = () => {
 			</FormPageView>
 		</View>
 
+	</SafeAreaView>
 	</ScrollView>
 	)
 }

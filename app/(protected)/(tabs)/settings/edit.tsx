@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, SafeAreaView } from 'react-native'
 import { FormButton } from 'components/FormButton'
 import { FormPageHeader } from 'components/FormPageHeader'
 import { FormPageView } from 'components/FormPageView'
@@ -60,6 +60,7 @@ const Edit = () => {
 
 	return (
 		<ScrollView>
+		<SafeAreaView>
 			
 			<FormPageHeader
 				backPageName="Settings"
@@ -123,6 +124,7 @@ const Edit = () => {
 				</FormPageView>
 			</View>
 
+		</SafeAreaView>
 		</ScrollView>
 	)
 }

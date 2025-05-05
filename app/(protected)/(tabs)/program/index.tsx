@@ -27,14 +27,14 @@ const MyProgram= () => {
 	}, []);
 
 	return (
-		<View>
+		<SafeAreaView>
 
 			<View className="bg-pastel-green w-full py-9 px-6 flex gap-y-9 items-start justify-start">
 
 				{/* Header Text */}
 				<SafeAreaView className="">
 					<Text className="mb-3 text-black text-3xl font-bold tracking-wide">
-						My Program
+						My Programs
 						</Text>
 					<Text className="text-black">
 						Browse the exercises set by your physios
@@ -105,7 +105,7 @@ const MyProgram= () => {
 
 
 
-		</View>
+		</SafeAreaView>
 	)
 }
 

@@ -6,7 +6,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useVideoPlayer, VideoView } from 'expo-video';
 import { Session } from 'interfaces/interfaces';
 import React, { useEffect, useState } from 'react'
-import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native'
 import { getSessions } from 'services/api';
 import { getTodaysSessions } from 'services/sessionsHelper';
 
@@ -65,7 +65,8 @@ const EachTask = () => {
 
   
 	return (
-		<ScrollView className="h-screen">
+	<ScrollView className="h-screen">
+		<SafeAreaView>
 
 			<View className="bg-pastel-green w-full pt-9 px-6 flex gap-y-9 items-start justify-start">
 							
@@ -241,7 +242,8 @@ const EachTask = () => {
 
 			</View>
 
-		</ScrollView>
+		</SafeAreaView> 
+		</ScrollView> 	  
 	)
 }
 

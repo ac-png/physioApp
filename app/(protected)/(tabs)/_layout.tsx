@@ -152,7 +152,7 @@ const _Layout = () => {
                                     tintColor={"#000000"}
                                 />
                                 <Text className="w-16 text-center text-black text-[10px] font-semibold truncate">
-                                    Program
+                                    Programs
                                 </Text>
                             </View>
                             <View className="z-0 absolute bottom-0.5 bg-pastel-green w-10 h-10 rounded-full" />
@@ -166,7 +166,7 @@ const _Layout = () => {
                                     tintColor={"#000000"}
                                 />
                                 <Text className="w-16 text-center text-black text-[10px] font-semibold">
-                                    Program
+                                    Programs
                                 </Text>
                             </View>
                             <View className="z-0 absolute -bottom-0.5 bg-white w-10 h-10 rounded-full" />

@@ -2,11 +2,19 @@ import { View, SafeAreaView, Text, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { OnboardingPolicies } from 'components/OnboardingPolicies'
 import { OnboardingButton } from 'components/OnboardingButton'
-import { router } from 'expo-router'
+import { Redirect, router } from 'expo-router'
+import { useAuth } from 'context/AuthContext'
 
 const Onboarding = () => {
 
     const [screen, setScreen]= useState<number>(0);
+    const { authState, onLogOut } = useAuth();
+    
+        if (authState?.authenticated) {
+    
+            return <Redirect href="/" />
+            
+        }
 
     const screenData = [
         {
