@@ -133,8 +133,8 @@ export default function Index() {
 
 
     return (           
-        <SafeAreaView className="w-full pt-9 px-6">
-        <ScrollView className="w-full" showsVerticalScrollIndicator={false}>
+        <SafeAreaView className="w-full ">
+        <ScrollView className="w-full pt-9 px-6" showsVerticalScrollIndicator={false}>
 
             {/* Welcome Text */}
             <View className="flex gap-y-1 mb-9">

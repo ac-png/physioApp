@@ -1,4 +1,5 @@
 import { router } from 'expo-router'
+import { StatusBar } from 'expo-status-bar';
 import { Program } from 'interfaces/interfaces';
 import { useEffect, useState } from 'react'
 import { View, Text, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native'
@@ -44,10 +45,10 @@ const MyProgram= () => {
 			</View>
 
 			<ScrollView
-				className="w-full flex flex-grow px-6 pt-0 pb-9 mt-9"
+				className="w-full flex flex-grow"
 				showsVerticalScrollIndicator={false}
 			>
-				<View className="flex gap-y-9">
+				<View className="w-full flex gap-y-9 px-6 pt-0 pb-9 mt-9">
 
 					{programData?.map(eachProgram => (
 					<View className="flex gap-y-3" key={eachProgram.id}>
@@ -102,8 +103,6 @@ const MyProgram= () => {
 				</View>
 	
 			</ScrollView>
-
-
 
 		</SafeAreaView>
 	)

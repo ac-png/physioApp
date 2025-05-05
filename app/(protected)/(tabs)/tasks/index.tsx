@@ -1,5 +1,6 @@
 import { icons } from 'constants/icons'
 import { router, useFocusEffect } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import { Session } from 'interfaces/interfaces';
 import React, { useCallback, useEffect, useState } from 'react'
 import { View, ScrollView, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native'
@@ -229,6 +230,8 @@ const Tasks = () => {
 				}
 	
 			</ScrollView>
+
+			<StatusBar translucent={false} backgroundColor="#CEEACA" />
 	
 		</SafeAreaView>
 	)
